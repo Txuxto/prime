@@ -29,11 +29,14 @@ class Perguntas extends StatelessWidget {
         children: [
           //Text(perguntas.elementAt(0)),
           Text(perguntas[0]),
-          ElevatedButton(onPressed: responder, child: Text('Resposta 1')),
+          //ElevatedButton(onPressed: responder, child: Text('Resposta 1')),
           //teve se usar responder e nao responder(), pois está se passando uma função e não chamando ela.
-          ElevatedButton(onPressed: responder, child: Text('Resposta 2')),
-          ElevatedButton(onPressed: responder, child: Text('Resposta 3')),
-          ElevatedButton(onPressed: responder, child: Text('Resposta 4')),
+          ElevatedButton(
+              onPressed: funcaoQueRetornaFuncao, child: Text('Resposta 2')),
+          ElevatedButton(
+              onPressed: funcaoQueRetornaFuncao, child: Text('Resposta 3')),
+          ElevatedButton(
+              onPressed: funcaoQueRetornaFuncao, child: Text('Resposta 4')),
         ],
       ),
     ));

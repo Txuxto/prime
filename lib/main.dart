@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 main() => runApp(Perguntas());
 
 class Perguntas extends StatelessWidget {
+  void responder() {
+    print(Text('pergunta respondida'));
+  }
+
   @override
   Widget build(BuildContext context) {
     final List<String> perguntas = [
@@ -19,10 +23,11 @@ class Perguntas extends StatelessWidget {
         children: [
           //Text(perguntas.elementAt(0)),
           Text(perguntas[0]),
-          ElevatedButton(onPressed: null, child: Text('Resposta 1')),
-          ElevatedButton(onPressed: null, child: Text('Resposta 2')),
-          ElevatedButton(onPressed: null, child: Text('Resposta 3')),
-          ElevatedButton(onPressed: null, child: Text('Resposta 4')),
+          ElevatedButton(onPressed: responder, child: Text('Resposta 1')),
+          //teve se usar responder e nao responder(), pois está se passando uma função e não chamando ela.
+          ElevatedButton(onPressed: responder, child: Text('Resposta 2')),
+          ElevatedButton(onPressed: responder, child: Text('Resposta 3')),
+          ElevatedButton(onPressed: responder, child: Text('Resposta 4')),
         ],
       ),
     ));

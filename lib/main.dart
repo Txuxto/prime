@@ -4,7 +4,13 @@ main() => runApp(Perguntas());
 
 class Perguntas extends StatelessWidget {
   void responder() {
-    print(Text('pergunta respondida'));
+    print('pergunta respondida');
+  }
+
+  void Function() funcaoQueRetornaFuncao() {
+    return () {
+      print('pergunta respondida #2');
+    };
   }
 
   @override
